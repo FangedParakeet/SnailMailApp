@@ -1,0 +1,69 @@
+<div id="forms">
+	<div class="block" id="what">
+		<div class="block" id="title">
+			What are you sending?
+		</div>
+		<div class="block" id="what_options">
+			<ul>
+				<li>
+					<div class="envelope" id="top"><%= image_tag 'envelope.png' %></div>
+					<div id="bottom">Envelope</div>
+				</li>			
+				<li>
+					<div class="package" id="top"><%= image_tag 'package.png' %></div>
+					<div id="bottom">Package</div>
+				</li>
+				<li>
+					<div class="box" id="top"><%= image_tag 'box.png' %></div>
+					<div id="bottom">Box</div>
+				</li>
+			</ul>
+	</div>
+	<div class="block" id="size">
+		<div class="block" id="title">
+			How big is the package?
+		</div>
+		<div class="block" id="size_options">
+			<div class="block" id="select">
+				<select name="size" id="size">
+				  <option value="choose" selected="true">Choose One</option>
+				  <option value="manual">Enter Manually</option>
+				  <option value="postcard">4 x 6 (Postcard)</option>
+				  <option value="letter">6 x 11 (Letter)</option>
+				  <option value="envelope">8.5 x 11 (Envelope)</option>
+				  <option value="legal">8.5 x 14 (Legal Envelope)</option>
+				</select>
+			</div>
+			<div class="block" id="manually">
+				<span class="whd"><%= text_field_tag :w, "W" %></span> X <span class="whd"><%= text_field_tag :h, "H" %></span> X <span class="whd"><%= text_field_tag :d, "D" %></span> in
+			</div>
+		</div>
+	</div>
+	<div class="block" id="weight">
+		<div class="block" id="title">
+			How much does it weigh?
+		</div>
+		<div class="block" id="weight_options">
+			<%= form_tag '#' do %>
+				<%= text_field_tag :weight, "0.0" %> lbs
+			<% end %>
+		</div>
+	</div>
+	<div class="block" id="who">
+		<div class="block" id="title">
+			Who are you sending it to?
+		</div>
+		<div class="block" id="who_options">
+			<%= form_tag '#' do %>
+				<div class="left"><%= label_tag :name, "Send to" %></div><div class="right"><%= text_field_tag :name, "Full name" %></div>
+				<div class="left"><%= label_tag :street, "at" %></div><div class="right"> <%= text_field_tag :street, "Street" %></div>
+				<div class="left"><span style='color:#fff'>.</span></div><div class="right"><%= text_field_tag :city, "City" %></div>
+				<div class="left"><span style='color:#fff'>.</span></div><div class="right"><%= text_field_tag :state, "ST" %> <%= text_field_tag :zip, "Zip" %></div>
+			<% end %>
+		</div>
+	</div>
+	<div class="block" id="speed"></div>
+</div>
+<div id="next">
+	
+</div>

@@ -1,0 +1,3 @@
+== SnailMailApp
+
+Calculate postage fee using EasyPost API.

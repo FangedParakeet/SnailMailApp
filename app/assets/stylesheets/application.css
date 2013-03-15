@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+ /*** RESET ***/
+
+ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+ small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, hr, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+   background: transparent;
+   border: 0;
+   font-size: 100%;
+   margin: 0;
+   outline: 0;
+   padding: 0;
+   vertical-align: baseline;
+ }
+ body {
+   line-height: 1;
+ }
+ a {
+   text-decoration: none;
+ }
+ *:focus {
+   outline: 1;
+ }
+ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+   display: block;
+ }
+ nav ul {
+   list-style: none;
+ }
+ ul {
+   list-style: none;
+ }
+ blockquote, q {
+   quotes: none;
+ }
+ blockquote:before, blockquote:after, q:before, q:after {
+   content: "";
+   content: none;
+ }
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ input, select {
+   vertical-align: middle;
+ }
+
+ /***GLOBAL***/ 
+ 
+
+ul li {
+    float: left;
+    text-align: center;
+    width: 33%;
+}
+
+.block {
+    width: 100%;
+    text-align: center;
+}
+
+#title {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#forms {
+    width: 50%;
+    height: 50%;
+    margin: 0px auto;
+}
+
+#manually {
+    width: 70%;
+    margin: 0px auto;
+}
+
+.whd input {
+    width: 20%;
+}
+
+
+#who_options {
+    width: 70%;
+    margin: 0px auto;
+}
+
+#who_options label {
+    display: inline-block;
+    margin-left: -75px;
+}
+
+#who_options input {
+    text-align: center;
+}
+
+.left {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+
+.right {
+    width: 80%;
+    float: left;
+}
+
+#who_options #state {
+    width: 24%;
+}
+
+#who_options #zip {
+    width: 24%;
+}
