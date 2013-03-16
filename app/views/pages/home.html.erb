@@ -6,16 +6,16 @@
 		<div class="block" id="what_options">
 			<ul>
 				<li>
-					<div class="envelope" id="top"><%= image_tag 'envelope.png' %></div>
-					<div id="bottom">Envelope</div>
+					<div id="envelope" class="what_option unselected"><%= image_tag 'envelope.png' %></div>
+					<div class="what_text">Envelope</div>
 				</li>			
 				<li>
-					<div class="package" id="top"><%= image_tag 'package.png' %></div>
-					<div id="bottom">Package</div>
+					<div id="package" class="what_option unselected"><%= image_tag 'package.png' %></div>
+					<div class="what_text">Package</div>
 				</li>
 				<li>
-					<div class="box" id="top"><%= image_tag 'box.png' %></div>
-					<div id="bottom">Box</div>
+					<div id="box" class="what_option unselected"><%= image_tag 'box.png' %></div>
+					<div class="what_text">Box</div>
 				</li>
 			</ul>
 	</div>
@@ -27,15 +27,15 @@
 			<div class="block" id="select">
 				<select name="size" id="size">
 				  <option value="choose" selected="true">Choose One</option>
-				  <option value="manual">Enter Manually</option>
+				  <option value="manual" id="manual">Enter Manually</option>
 				  <option value="postcard">4 x 6 (Postcard)</option>
 				  <option value="letter">6 x 11 (Letter)</option>
 				  <option value="envelope">8.5 x 11 (Envelope)</option>
 				  <option value="legal">8.5 x 14 (Legal Envelope)</option>
 				</select>
 			</div>
-			<div class="block" id="manually">
-				<span class="whd"><%= text_field_tag :w, "W" %></span> X <span class="whd"><%= text_field_tag :h, "H" %></span> X <span class="whd"><%= text_field_tag :d, "D" %></span> in
+			<div class="block" id="manually" style="display:none">
+				<span class="whd"><%= text_field_tag :w, nil, placeholder: "W" %></span> X <span class="whd"><%= text_field_tag :h, nil, placeholder: "H" %></span> X <span class="whd"><%= text_field_tag :d, nil, placeholder: "D" %></span> in
 			</div>
 		</div>
 	</div>
@@ -45,7 +45,7 @@
 		</div>
 		<div class="block" id="weight_options">
 			<%= form_tag '#' do %>
-				<%= text_field_tag :weight, "0.0" %> lbs
+				<%= text_field_tag :weight, nil, placeholder: "0.0" %> lbs
 			<% end %>
 		</div>
 	</div>
@@ -55,10 +55,10 @@
 		</div>
 		<div class="block" id="who_options">
 			<%= form_tag '#' do %>
-				<div class="left"><%= label_tag :name, "Send to" %></div><div class="right"><%= text_field_tag :name, "Full name" %></div>
-				<div class="left"><%= label_tag :street, "at" %></div><div class="right"> <%= text_field_tag :street, "Street" %></div>
-				<div class="left"><span style='color:#fff'>.</span></div><div class="right"><%= text_field_tag :city, "City" %></div>
-				<div class="left"><span style='color:#fff'>.</span></div><div class="right"><%= text_field_tag :state, "ST" %> <%= text_field_tag :zip, "Zip" %></div>
+				<div class="left"><%= label_tag :name, "Send to" %></div><div class="right"><%= text_field_tag :name, nil, placeholder: "Full Name" %></div>
+				<div class="left"><%= label_tag :street, "at" %></div><div class="right"> <%= text_field_tag :street, nil, placeholder: "Street" %></div>
+				<div class="left"><span style='color:#fff'>.</span></div><div class="right"><%= text_field_tag :city, nil, placeholder: "City" %></div>
+				<div class="left"><span style='color:#fff'>.</span></div><div class="right"><%= text_field_tag :state, nil, placeholder: "ST" %> <%= text_field_tag :zip, nil, placeholder: "Zip" %></div>
 			<% end %>
 		</div>
 	</div>
